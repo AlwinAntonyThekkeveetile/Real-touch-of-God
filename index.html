@@ -3149,13 +3149,31 @@
                 <a href="https://www.instagram.com/the_touchof_god?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn white-btn"><i class="fab fa-instagram"></i>the_touchof_god</a>
             </div>
         </section> 
-      <div style="max-width: 540px; margin: auto;">
-  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C4BWJOFSzHH/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px rgba(0,0,0,0.5), 0 1px 10px rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; width:99.375%; padding:0;"></blockquote>
+      <div class="instagram-embed" data-url="https://www.instagram.com/p/C4BWJOFSzHH/"></div>
+<!-- <div class="instagram-embed" data-url="https://www.instagram.com/p/C4F5cGWSU0B/"></div>
 
-  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C4F5cGWSU0B/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px rgba(0,0,0,0.5), 0 1px 10px rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; width:99.375%; padding:0;"></blockquote>
-</div>
+<script>
+  function loadInstagramEmbed(container, url) {
+    container.innerHTML = `
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="${url}" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px rgba(0,0,0,0.5),0 1px 10px rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; width:99.375%; padding:0;"></blockquote>
+    `;
+    if (window.instgrm) instgrm.Embeds.process();
+  }
 
-<script async src="//www.instagram.com/embed.js" onload="if(window.instgrm) instgrm.Embeds.process();"></script>
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        loadInstagramEmbed(el, el.getAttribute('data-url'));
+        obs.unobserve(el);
+      }
+    });
+  });
+
+  document.querySelectorAll('.instagram-embed').forEach(el => observer.observe(el));
+</script>
+<script async src="https://www.instagram.com/embed.js"></script>
+ -->
 
 
         <!-- Instagram section End -->
