@@ -14,10 +14,21 @@
 // original preload
 
 //fix
-$(document).ready(function () {
-    $('#preloader').fadeOut('slow');
-    $('body').css({ 'overflow': 'visible' });
+// $(document).ready(function () {
+//     $('#preloader').fadeOut('slow');
+//     $('body').css({ 'overflow': 'visible' });
+// });
+$(window).on('load', function () {
+  $('#preloader').fadeOut('slow');
+  $('body').css({ 'overflow': 'visible' });
 });
+
+// Safety fallback in case some assets fail to load
+setTimeout(function () {
+  $('#preloader').fadeOut('slow');
+  $('body').css({ 'overflow': 'visible' });
+}, 3000); // hide preloader after 3s max
+
 //fix
 
 
