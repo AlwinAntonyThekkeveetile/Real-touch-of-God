@@ -2,15 +2,23 @@
 
 "use strict";
 
+// original preload
 
+// $(window).on('load', function () {
 
-$(window).on('load', function () {
+// 	$('#preloader').delay(350).fadeOut('slow');
 
-	$('#preloader').delay(350).fadeOut('slow');
+// 	$('body').delay(350).css({ 'overflow': 'visible' });
 
-	$('body').delay(350).css({ 'overflow': 'visible' });
+// })
+// original preload
 
-})
+//fix
+$(document).ready(function () {
+    $('#preloader').fadeOut('slow');
+    $('body').css({ 'overflow': 'visible' });
+});
+//fix
 
 
 
